@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,9 +10,11 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-import {
-  Grid,
-}from "@radix-ui/themes"
+import { DndContext } from "@dnd-kit/core";
+import { 
+  useSortable,
+  SortableContext,
+ } from "@dnd-kit/sortable";
 
 
 export default function Home() {
@@ -60,13 +63,74 @@ export default function Home() {
         </div>
 
       </header>
-      <main className='min-h-screen w-full bg-background '>
-        <div className="container ">
+      <main className='mt-10 min-h-screen w-full bg-background'>
+        <div className="container max-w-[1400px]">
+          <div className="mb-4 grid grid-cols-1 gap-6  md:grid-cols-3">
+              <div className="flex flex-col gap-4 rounded-lg border-2 border-border p-6">
+                <h2 className="text-xl font-bold">Air Conditioner</h2>
+                <div className="flex items-center justify-between">
+                  Status
+                  <div className="flex items-center gap-2 text-green-500">
+                    Online
+                    <span className="size-2.5 rounded-full bg-green-500" />
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  Mode
+                  <span>Cool</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  Target Temperature
+                  <span>24°C</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <Button variant={"destructive"}>Turn Off</Button>
+                </div>
+              </div>
+            <div className="flex flex-col gap-4 rounded-lg border-2 border-border bg-background/95  p-6">
+              <h2 className="text-xl font-bold">Device</h2>
+              <div className="flex items-center justify-between">
+                <span>Device Name</span>
+                <span>Device Status</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Device Name</span>
+                <span>Device Status</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Device Name</span>
+                <span>Device Status</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <button>Button 1</button>
+                <button>Button 2</button>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 rounded-lg border-2 border-border bg-background/95  p-6">
+              <h2 className="text-xl font-bold">Device</h2>
+              <div className="flex items-center justify-between">
+                <span>Device Name</span>
+                <span>Device Status</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Device Name</span>
+                <span>Device Status</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span>Device Name</span>
+                <span>Device Status</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <button>Button 1</button>
+                <button>Button 2</button>
+              </div>
+            </div>
+          </div>
         </div>
 
       </main>
     </body>
-    );
+  );
     
     
 }
