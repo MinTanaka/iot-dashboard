@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -10,11 +11,6 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-import { DndContext } from "@dnd-kit/core";
-import { 
-  useSortable,
-  SortableContext,
- } from "@dnd-kit/sortable";
 
 
 export default function Home() {
