@@ -27,7 +27,7 @@ export default function Home() {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Devices</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">Devices</NavigationMenuTrigger>
                     <NavigationMenuContent className="flex flex-col gap-2 p-3">
                       <NavigationMenuLink className="flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-accent">
                         <div className="flex size-6 items-center justify-center bg-primary/50">
@@ -47,7 +47,7 @@ export default function Home() {
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Routine</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-transparent">Routine</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <NavigationMenuLink>Link</NavigationMenuLink>
                     </NavigationMenuContent>
