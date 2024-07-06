@@ -19,7 +19,7 @@ interface tileprops {
   title: string;
   status: string;
   mode: string;
-  target: string;
+  value: string;
   image_url: string;
   status_style?: string;
   toggle?: Function;
